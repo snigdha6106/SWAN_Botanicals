@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Botanical Elegance palette */
+    --background: 45 60% 98%; /* warm ivory */
+    --foreground: 210 15% 15%; /* deep slate */
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 15%;
+
+    --primary: 162 33% 35%; /* botanical green/teal */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 168 44% 90%; /* soft mint */
+    --secondary-foreground: 165 20% 20%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 46%;
+
+    --accent: 350 55% 95%; /* blush */
+    --accent-foreground: 350 35% 30%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 90%;
+    --input: 210 30% 90%;
+    --ring: 162 33% 35%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar tokens */
+    --sidebar-background: 45 60% 98%;
+    --sidebar-foreground: 210 15% 20%;
+    --sidebar-primary: 162 33% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 168 44% 90%;
+    --sidebar-accent-foreground: 165 20% 20%;
+    --sidebar-border: 210 30% 90%;
+    --sidebar-ring: 162 33% 35%;
+
+    /* Signature gradients & shadows */
+    --gradient-hero: radial-gradient(1200px 800px at var(--mx,50%) var(--my,50%), hsl(var(--primary) / 0.18), transparent 60%);
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.35);
+  }
+
+  .dark {
+    --background: 210 25% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 25% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 25% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 156 55% 40%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 170 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 22% 18%;
+    --muted-foreground: 215 20% 72%;
+
+    --accent: 340 40% 20%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 35%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 22% 18%;
+    --input: 215 22% 18%;
+    --ring: 156 55% 45%;
+
+    --sidebar-background: 210 25% 8%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 156 55% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 22% 18%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 215 22% 18%;
+    --sidebar-ring: 156 55% 45%;
+  }
+}
+
+@layer components {
+  .shadow-elev { box-shadow: var(--shadow-elegant); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .interactive-spotlight { background: var(--gradient-hero); }
+  .story-link { position: relative; display: inline-block; }
+  .story-link::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 100%; background: hsl(var(--primary)); transform-origin: bottom right; transform: scaleX(0); transition: transform 300ms ease; }
+  .story-link:hover::after { transform-origin: bottom left; transform: scaleX(1); }
+  .hover-scale { transition: transform 200ms ease; }
+  .hover-scale:hover { transform: scale(1.05); }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
