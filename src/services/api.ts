@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://swan-botanicals-backend.onrender.com';
+const API_BASE_URL = 'http://localhost:5000/api';
 
 // Types
 export interface ApiResponse<T = any> {
