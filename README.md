@@ -2,6 +2,13 @@
 
 A modern e-commerce platform built with React, TypeScript, Node.js, and MongoDB for Swan Botanicals hair care products.
 
+
+## Project Resources
+
+📄 [Proposal PDF](proposal/Swan%20Botanicals%20Proposal.pdf)  
+🎥 [Walkthrough Video](walkthrough/walkthru.mov.mp4)
+
+
 ## ✨ Features
 
 ### Frontend
@@ -155,13 +162,6 @@ A modern e-commerce platform built with React, TypeScript, Node.js, and MongoDB 
 
 ### Health Check
 - `GET /api/health` - API health check
-
-
-## Project Resources
-
-📄 [Proposal PDF](proposal/Swan%20Botanicals%20Proposal.pdf)  
-🎥 [Walkthrough Video](walkthrough/walkthru.mov.mp4)
-
 
 ---
 
