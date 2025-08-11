@@ -152,8 +152,16 @@ A modern e-commerce platform built with React, TypeScript, Node.js, and MongoDB 
 - `GET /api/orders/:orderId` - Get single order
 - `PUT /api/orders/:orderId/status` - Update order status (protected)
 
+
 ### Health Check
 - `GET /api/health` - API health check
+
+
+## Project Resources
+
+📄 [Proposal PDF](proposal/Swan%20Botanicals%20Proposal.pdf)  
+🎥 [Walkthrough Video](walkthrough/walkthru.mov.mp4)
+
 
 ---
 
